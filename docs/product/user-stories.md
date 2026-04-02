@@ -37,30 +37,44 @@
 
 # 🟦 EPIC E1: Application Setup
 
-# 🟦 EPIC E1: Application Setup
-
 | ID | Title | Role | User Story | Priority | Acceptance Criteria |
 |----|------|------|------------|----------|---------------------|
-| E1.1 | Frontend Project Initialization | Developer | As a developer, I want to initialize a frontend project so that the UI layer is established | M | Project initialized; Folder structure created; App runs locally |
-| E1.2 | Frontend Basic UI Setup | Developer | As a developer, I want a basic UI layout so that users can interact with the system | M | Landing page loads; UI renders without errors |
-| E1.3 | Frontend API Integration | Developer | As a developer, I want frontend to communicate with backend so that data can be displayed | M | API calls succeed; Data rendered on UI |
-| E1.4 | Backend Project Initialization | Developer | As a developer, I want to initialize backend service so that business logic can be implemented | M | Backend project created; Server starts successfully |
-| E1.5 | Backend API Endpoint Setup | Developer | As a developer, I want API endpoints so that frontend can interact with backend | M | At least one GET endpoint works; Response returned correctly |
-| E1.6 | Backend Environment Configuration | Developer | As a developer, I want environment-based configuration so that settings are manageable | M | Env variables used; No hardcoded configs |
-| E1.7 | Database Initialization | Developer | As a developer, I want a database setup so that data can be stored persistently | M | DB created; Accessible from backend |
-| E1.8 | Database Schema Design | Developer | As a developer, I want schema defined so that data is structured properly | M | Tables created; Schema validated |
-| E1.9 | Backend-Database Integration | Developer | As a developer, I want backend connected to database so that data operations can work | M | Successful DB connection; Queries execute |
-| E1.10 | CRUD API Implementation | Developer | As a developer, I want CRUD APIs so that application can perform data operations | M | Create, Read, Update, Delete endpoints working |
-| E1.11 | Application Configuration Management | Developer | As a developer, I want centralized configuration so that system is maintainable | M | Config separated from code; Supports multiple environments |
-| E1.12 | Error Handling Mechanism | Developer | As a developer, I want error handling so that system failures are managed properly | M | API returns proper error responses; No crashes |
-| E1.13 | Logging Setup (Application Level) | Developer | As a developer, I want logging so that issues can be diagnosed | M | Logs generated for requests and errors |
-| E1.14 | Health Check Endpoint | Developer | As a developer, I want a health endpoint so that system status can be monitored | M | `/health` endpoint returns status |
-| E1.15 | Local End-to-End Integration | Developer | As a developer, I want full system working locally so that components are validated together | M | Frontend → Backend → DB flow works |
-| E1.16 | Dependency Management | Developer | As a developer, I want proper dependency handling so that builds are stable | M | Dependencies defined; No missing packages |
-| E1.17 | Code Structure Standardization | Developer | As a developer, I want clean project structure so that system is maintainable | M | Folder structure organized; Separation of concerns |
-| E1.18 | API Response Standardization | Developer | As a developer, I want consistent API responses so that frontend handling is predictable | M | Standard response format (success/error) |
-| E1.19 | Basic Security (Input Validation) | Developer | As a developer, I want input validation so that invalid data is prevented | M | Inputs validated; Invalid requests rejected |
-| E1.20 | Environment Setup Documentation (Internal) | Developer | As a developer, I want setup instructions so that system can be replicated | M | Local setup works using defined steps |
+| E1.1 | Frontend Service Setup | Developer | As a developer, I want a frontend service so that users can interact with the application | M | Frontend runs locally; UI accessible |
+| E1.2 | Backend Service Setup | Developer | As a developer, I want a backend API so that business logic is handled | M | API runs locally; Endpoint responds |
+| E1.3 | Database Setup | Developer | As a developer, I want a database so that data is stored persistently | M | DB initialized; Backend connects |
+
+| E1.4 | Service Configuration via Environment Variables | Developer | As a developer, I want environment-based configs so that services are configurable across environments | M | No hardcoded configs; Env variables used |
+| E1.5 | Standardized Project Structure | Developer | As a developer, I want structured codebases so that services are maintainable | M | Clean folder structure; Separation of concerns |
+
+| E1.6 | API Integration (Frontend ↔ Backend) | Developer | As a developer, I want frontend to call backend APIs so that data flows through system | M | API calls succeed; Data displayed |
+| E1.7 | Backend ↔ Database Integration | Developer | As a developer, I want backend connected to DB so that data operations work | M | Queries execute successfully |
+
+| E1.8 | Health Check Endpoint | Developer | As a developer, I want health endpoints so that services can be monitored | M | `/health` endpoint returns status |
+
+| E1.9 | Application Logging | Developer | As a developer, I want logging so that system behavior can be tracked | M | Logs generated for requests/errors |
+
+| E1.10 | Local Multi-Service Execution | Developer | As a developer, I want all services to run together locally so that integration is validated | M | Frontend, backend, DB run together |
+
+| E1.11 | Docker-Ready Codebase | DevOps Engineer | As a DevOps Engineer, I want services structured for containerization so that Dockerization is seamless | M | No OS-specific dependencies; Services container-ready |
+
+| E1.12 | Dependency Management | Developer | As a developer, I want proper dependency management so that builds are reproducible | M | Dependencies locked; Build succeeds |
+
+
+| E1.13 | Centralized Configuration File | Developer | As a developer, I want centralized config so that environment management is easier | S | Config file exists; Supports multiple environments |
+| E1.14 | API Response Standardization | Developer | As a developer, I want consistent API responses so that system behavior is predictable | S | Standard success/error format |
+| E1.15 | Error Handling Mechanism | Developer | As a developer, I want structured error handling so that failures are managed | S | Errors handled gracefully |
+| E1.16 | Seed/Test Data Setup | Developer | As a developer, I want initial data so that system can be tested easily | S | Sample data available |
+| E1.17 | Basic Input Validation | Developer | As a developer, I want input validation so that invalid requests are prevented | S | Invalid inputs rejected |
+| E1.18 | Port Configuration | Developer | As a developer, I want configurable ports so that services are flexible | S | Ports defined via env |
+
+| E1.19 | Local Orchestration (docker-compose) | DevOps Engineer | As a DevOps Engineer, I want docker-compose so that local multi-service setup is easier | C | Services run via single command |
+| E1.20 | API Documentation (Basic) | Developer | As a developer, I want API docs so that endpoints are clear | C | API endpoints documented |
+| E1.21 | Structured Logging Format | Developer | As a developer, I want structured logs so that logs are machine-readable | C | JSON/log format consistent |
+| E1.22 | Config Profiles (dev/test) | Developer | As a developer, I want config profiles so that environments are separated | C | Profiles defined |
+
+| E1.23 | Advanced Authentication System | Developer | Out of scope for initial DevOps focus |
+| E1.24 | UI/UX Optimization | Developer | Not relevant for DevOps objective |
+| E1.25 | Complex Business Logic | Developer | Focus is platform, not product complexity |
 
 ---
 
