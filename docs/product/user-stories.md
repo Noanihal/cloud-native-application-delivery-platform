@@ -156,19 +156,6 @@
 
 ---
 
----
-
-# 🟦 EPIC E5: GitOps Deployment
-
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E5.1 | GitOps Setup | DevOps Engineer | As a DevOps Engineer, I want Git as source of truth so that deployments are controlled | M | Repo stores configs; Versioning works |
-| E5.2 | ArgoCD Deployment | Platform Engineer | As a Platform Engineer, I want ArgoCD to deploy apps so that deployment is automated | M | Sync works; Status visible |
-
----
-
-# 🟦 EPIC E6: Observability
-
 # 🟦 EPIC E5: GitOps Deployment
 
 | ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
@@ -195,6 +182,31 @@
 | E5.20 | Multi-Tenant GitOps Setup | Platform Engineer | As a Platform Engineer, I want multi-tenant GitOps so that multiple teams can deploy independently | W | Not required for single-project scope |
 | E5.21 | Advanced Deployment Strategies (Canary/Blue-Green via GitOps) | Platform Engineer | As a Platform Engineer, I want advanced strategies so that releases are safer | W | Will be considered after baseline GitOps |
 | E5.22 | Policy Enforcement (OPA/Gatekeeper) | DevSecOps Engineer | As a DevSecOps Engineer, I want policy enforcement so that configs are validated | W | Out of scope for initial implementation |
+
+---
+# 🟦 EPIC E6: Observability
+
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E6.1 | Metrics Collection Setup (Prometheus) | SRE | As an SRE, I want to collect metrics so that system performance can be monitored | M | Prometheus deployed; Metrics scraped successfully |
+| E6.2 | Application Metrics Exposure | Developer | As a developer, I want application metrics exposed so that they can be monitored | M | Metrics endpoint available (e.g., /metrics) |
+| E6.3 | Grafana Deployment | SRE | As an SRE, I want Grafana so that metrics can be visualized | M | Grafana deployed; Accessible via UI |
+| E6.4 | Dashboard Creation | SRE | As an SRE, I want dashboards so that system health is visible | M | Dashboards show CPU, memory, request metrics |
+| E6.5 | Kubernetes Metrics Monitoring | SRE | As an SRE, I want cluster-level metrics so that infrastructure health is tracked | M | Node/pod metrics visible |
+| E6.6 | Container Logs Access | SRE | As an SRE, I want logs from containers so that issues can be debugged | M | Logs accessible via kubectl logs |
+| E6.7 | Centralized Logging Setup | SRE | As an SRE, I want centralized logging so that logs are aggregated | M | Logs collected in single system (CloudWatch/Loki) |
+| E6.8 | Log Integration with Application | Developer | As a developer, I want structured logs so that logs are meaningful | M | Logs include request/response/error data |
+| E6.9 | Observability Validation | SRE | As an SRE, I want to validate observability so that system is monitorable end-to-end | M | Metrics + logs visible for all services |
+| E6.10 | Alerting Setup (Prometheus Alertmanager) | SRE | As an SRE, I want alerts so that failures are detected proactively | S | Alerts triggered on threshold breach |
+| E6.11 | Log Query & Search | SRE | As an SRE, I want log search capability so that debugging is faster | S | Logs searchable via query |
+| E6.12 | Dashboard Standardization | SRE | As an SRE, I want standardized dashboards so that monitoring is consistent | S | Common dashboards reused |
+| E6.13 | Application-Level Metrics (Custom) | Developer | As a developer, I want custom metrics so that business-level insights are available | S | Custom metrics exposed |
+| E6.14 | Distributed Tracing | SRE | As an SRE, I want tracing so that request flow is visible | C | Traces captured (Jaeger/Tempo) |
+| E6.15 | External Monitoring Integration (Datadog) | SRE | As an SRE, I want external monitoring so that advanced insights are available | C | Datadog integrated |
+| E6.16 | Log Correlation with Metrics | SRE | As an SRE, I want logs and metrics correlated so that debugging is easier | C | Logs linked with metrics |
+| E6.17 | Full Observability Stack (Tracing + APM + Profiling) | SRE | As an SRE, I want complete observability so that system is fully instrumented | W | Overkill for initial setup; incremental approach preferred |
+| E6.18 | AI-Based Anomaly Detection | SRE | As an SRE, I want automated anomaly detection so that issues are predicted | W | Not required for baseline observability |
+| E6.19 | Enterprise SLA Monitoring System | SRE | As an SRE, I want SLA tracking so that uptime is formally measured | W | Can be added after system maturity |
 
 ---
 
