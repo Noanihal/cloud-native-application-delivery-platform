@@ -212,18 +212,57 @@
 
 # 🟦 EPIC E7: Security
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E7.1 | Secrets Management | DevSecOps Engineer | As a DevSecOps Engineer, I want secure secrets so that data is protected | M | No hardcoded secrets; Secure storage |
-| E7.2 | Image Scanning | DevSecOps Engineer | As a DevSecOps Engineer, I want image scanning so that vulnerabilities are detected | S | Trivy scan runs; Issues identified |
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E7.1 | IAM Role Configuration (AWS) | Cloud Engineer | As a Cloud Engineer, I want IAM roles configured so that access to AWS resources is secure | M | Least-privilege roles created; Access controlled |
+| E7.2 | Kubernetes RBAC Setup | Platform Engineer | As a Platform Engineer, I want RBAC so that cluster access is restricted | M | Roles and role bindings configured |
+| E7.3 | Secrets Management (AWS Secrets Manager / K8s Secrets) | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets managed securely so that credentials are protected | M | Secrets stored securely; No hardcoding |
+| E7.4 | Secure Environment Variable Handling | Developer | As a developer, I want secure env handling so that sensitive data is not exposed | M | Sensitive values not stored in code |
+| E7.5 | CI/CD Secrets Management | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets in pipeline secured so that credentials are protected | M | Secrets stored in GitHub Secrets; No plaintext exposure |
+| E7.6 | Secure Docker Image Practices | DevSecOps Engineer | As a DevSecOps Engineer, I want secure images so that vulnerabilities are minimized | M | Minimal base image; No unnecessary packages |
+| E7.7 | Container Vulnerability Scanning (Trivy) | DevSecOps Engineer | As a DevSecOps Engineer, I want image scanning so that vulnerabilities are detected | M | Scan runs; Issues reported |
+| E7.8 | Code Quality & Security Scan (SonarQube) | DevSecOps Engineer | As a DevSecOps Engineer, I want code scanning so that vulnerabilities are identified | M | Scan integrated in pipeline |
+| E7.9 | Network Access Control (Security Groups / K8s) | Cloud Engineer | As a Cloud Engineer, I want network controls so that services are protected | M | Only required ports exposed |
+| E7.10 | HTTPS / Secure Access Setup | Platform Engineer | As a Platform Engineer, I want secure communication so that data is encrypted | M | HTTPS enabled (basic setup) |
+| E7.11 | Sensitive Data Masking in Logs | Developer | As a developer, I want sensitive data masked so that logs are safe | M | No secrets in logs |
+| E7.12 | Security Validation in Pipeline | DevSecOps Engineer | As a DevSecOps Engineer, I want security checks in CI so that insecure builds fail | M | Pipeline fails on critical vulnerabilities |
+| E7.13 | Kubernetes Network Policies | Platform Engineer | As a Platform Engineer, I want network policies so that pod communication is controlled | S | Traffic restricted between services |
+| E7.14 | Image Signing / Verification | DevSecOps Engineer | As a DevSecOps Engineer, I want image verification so that trusted images are used | S | Image validation enabled |
+| E7.15 | Role-Based Access in CI/CD | DevSecOps Engineer | As a DevSecOps Engineer, I want role-based pipeline access so that permissions are controlled | S | Access restricted by roles |
+| E7.16 | Secrets Rotation Strategy | DevSecOps Engineer | As a DevSecOps Engineer, I want secret rotation so that credentials remain secure | S | Rotation mechanism defined |
+| E7.17 | Web Application Firewall (WAF) | Cloud Engineer | As a Cloud Engineer, I want WAF so that application is protected from attacks | C | WAF configured |
+| E7.18 | Security Monitoring Dashboard | SRE | As an SRE, I want security metrics so that threats are visible | C | Security metrics dashboard |
+| E7.19 | Policy Enforcement (OPA/Gatekeeper) | DevSecOps Engineer | As a DevSecOps Engineer, I want policy enforcement so that configs follow rules | C | Policies applied to cluster |
+| E7.20 | Zero Trust Architecture | Security Architect | As a Security Architect, I want zero trust so that all access is verified | W | Too complex for initial project scope |
+| E7.21 | Advanced Threat Detection (SIEM) | SRE | As an SRE, I want SIEM so that threats are analyzed centrally | W | Not required for baseline system |
+| E7.22 | Full Compliance Framework (SOC2/GDPR) | Compliance Engineer | As a Compliance Engineer, I want compliance so that system meets regulations | W | Out of scope for portfolio project |
 
 ---
 
 # 🟦 EPIC E8: Infrastructure (Future Phase)
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E8.1 | Terraform Setup | Cloud Engineer | As a Cloud Engineer, I want infra as code so that infrastructure is reproducible | C | Terraform scripts created |
-| E8.2 | Ansible Configuration | Cloud Engineer | As a Cloud Engineer, I want config mgmt so that systems are consistent | C | Playbooks created; Setup automated |
+
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E8.1 | Terraform Project Setup | Cloud Engineer | As a Cloud Engineer, I want a Terraform project so that infrastructure can be managed as code | M | Terraform repo created; Structure defined |
+| E8.2 | VPC Provisioning via Terraform | Cloud Engineer | As a Cloud Engineer, I want VPC created via IaC so that network is reproducible | M | VPC, subnets, routing configured |
+| E8.3 | EKS Cluster Provisioning via Terraform | Cloud Engineer | As a Cloud Engineer, I want EKS created via Terraform so that cluster setup is automated | M | EKS cluster provisioned successfully |
+| E8.4 | IAM Roles via Terraform | Cloud Engineer | As a Cloud Engineer, I want IAM roles defined so that access is controlled | M | Roles created with least privilege |
+| E8.5 | ECR Repository via Terraform | Cloud Engineer | As a Cloud Engineer, I want ECR repos created so that images can be stored | M | ECR repos available |
+| E8.6 | Terraform State Management (Remote Backend) | DevOps Engineer | As a DevOps Engineer, I want remote state so that infrastructure is managed safely | M | State stored in S3; Locking enabled |
+| E8.7 | Terraform Execution Workflow | DevOps Engineer | As a DevOps Engineer, I want standardized workflow so that infra changes are controlled | M | Plan → Apply workflow defined |
+| E8.8 | Environment-Based Infrastructure (dev/prod) | Cloud Engineer | As a Cloud Engineer, I want environment separation so that deployments are isolated | M | Separate configs per environment |
+| E8.9 | Infrastructure Validation | DevOps Engineer | As a DevOps Engineer, I want validation so that infra changes are safe | M | Terraform validate/plan executed |
+| E8.10 | Modular Terraform Design | Cloud Engineer | As a Cloud Engineer, I want modules so that infra is reusable | S | Modules created for VPC, EKS, IAM |
+| E8.11 | CI/CD for Terraform | DevOps Engineer | As a DevOps Engineer, I want pipeline for infra so that changes are automated | S | Terraform integrated with CI pipeline |
+| E8.12 | Ansible Setup | DevOps Engineer | As a DevOps Engineer, I want Ansible so that system configs are automated | S | Playbooks created |
+| E8.13 | Node Configuration via Ansible | DevOps Engineer | As a DevOps Engineer, I want node setup automated so that consistency is maintained | S | Nodes configured via playbooks |
+| E8.14 | Secrets Handling in Terraform | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets handled securely so that sensitive data is protected | S | No secrets in code; Secure storage used |
+| E8.15 | Multi-Region Infrastructure | Cloud Engineer | As a Cloud Engineer, I want multi-region setup so that system is resilient | C | Infra deployed in multiple regions |
+| E8.16 | Cost Optimization Setup | Cloud Engineer | As a Cloud Engineer, I want cost tracking so that resources are optimized | C | Cost monitoring enabled |
+| E8.17 | Infrastructure Monitoring Integration | SRE | As an SRE, I want infra monitoring so that resource health is tracked | C | Infra metrics visible |
+| E8.18 | Fully Automated Infra Provisioning Pipeline | DevOps Engineer | As a DevOps Engineer, I want fully automated infra provisioning so that no manual steps are needed | W | Will introduce after stable manual workflow |
+| E8.19 | Multi-Cloud Infrastructure | Cloud Engineer | As a Cloud Engineer, I want multi-cloud setup so that vendor lock-in is avoided | W | Out of scope; AWS-only focus |
+| E8.20 | Advanced Networking (PrivateLink, Transit Gateway) | Cloud Engineer | As a Cloud Engineer, I want advanced networking so that enterprise connectivity is achieved | W | Not required for current project scale |
 
 ---
