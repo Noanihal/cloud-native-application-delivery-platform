@@ -42,7 +42,6 @@
 | E1.1 | Frontend Service Setup | Developer | As a developer, I want a frontend service so that users can interact with the application | M | Frontend runs locally; UI accessible |
 | E1.2 | Backend Service Setup | Developer | As a developer, I want a backend API so that business logic is handled | M | API runs locally; Endpoint responds |
 | E1.3 | Database Setup | Developer | As a developer, I want a database so that data is stored persistently | M | DB initialized; Backend connects |
-
 | E1.4 | Service Configuration via Environment Variables | Developer | As a developer, I want environment-based configs so that services are configurable across environments | M | No hardcoded configs; Env variables used |
 | E1.5 | Standardized Project Structure | Developer | As a developer, I want structured codebases so that services are maintainable | M | Clean folder structure; Separation of concerns |
 
