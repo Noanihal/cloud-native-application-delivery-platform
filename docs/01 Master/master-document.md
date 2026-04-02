@@ -12,8 +12,8 @@
 | Version | v1.0 |
 | Status | Draft |
 | Owner Role | Product Owner / Platform Lead |
-| Created On | 2026-04-02 |
-| Last Updated | 2026-04-02 |
+| Created On | 02-APR-2024 |
+| Last Updated | 02-APR-2024 |
 
 ---
 
@@ -21,7 +21,7 @@
 
 | Version | Date | Updated By (Role) | Changes |
 |--------|------|------------------|--------|
-| v1.0 | 2026-04-02 | Product Owner | Initial version |
+| v1.0 | 02-APR-2024 | Product Owner | Initial version |
 
 ---
 
