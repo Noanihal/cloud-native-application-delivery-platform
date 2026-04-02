@@ -127,11 +127,34 @@
 
 # 🟦 EPIC E4: Kubernetes Deployment
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E4.1 | Deploy to Kubernetes | Platform Engineer | As a Platform Engineer, I want to deploy apps so that they run in cluster | M | Pods running; Services accessible |
-| E4.2 | Helm Deployment | Platform Engineer | As a Platform Engineer, I want Helm charts so that deployment is standardized | M | Helm deploy works; Configurable |
-| E4.3 | Auto Scaling | Platform Engineer | As a Platform Engineer, I want scaling so that system handles load | S | HPA configured; Scaling works |
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E4.1 | Kubernetes Cluster Setup (EKS) | Cloud Engineer | As a Cloud Engineer, I want to provision a Kubernetes cluster so that applications can be deployed | M | EKS cluster created; Nodes available |
+| E4.2 | kubectl Access Configuration | DevOps Engineer | As a DevOps Engineer, I want access to the cluster so that I can manage deployments | M | kubectl configured; Cluster accessible |
+| E4.3 | Namespace Setup | Platform Engineer | As a Platform Engineer, I want namespaces so that workloads are logically separated | M | Namespace created and used |
+| E4.4 | Backend Deployment | Platform Engineer | As a Platform Engineer, I want backend deployed so that API runs in cluster | M | Pods running; Backend accessible internally |
+| E4.5 | Frontend Deployment | Platform Engineer | As a Platform Engineer, I want frontend deployed so that UI is available | M | Pods running; UI accessible |
+| E4.6 | Database Deployment | Platform Engineer | As a Platform Engineer, I want database deployed so that persistence is available | M | DB pod running; Persistent storage configured |
+| E4.7 | Service Configuration (ClusterIP) | Platform Engineer | As a Platform Engineer, I want services so that pods can communicate | M | Services created; Internal communication works |
+| E4.8 | External Access (LoadBalancer/Ingress) | Platform Engineer | As a Platform Engineer, I want external access so that users can access application | M | App accessible via external endpoint |
+| E4.9 | Environment Variables in Kubernetes | Platform Engineer | As a Platform Engineer, I want environment variables injected so that configs are dynamic | M | Env variables configured via manifests |
+| E4.10 | Secrets Management (Kubernetes) | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets managed so that sensitive data is secure | M | Secrets created; No hardcoded credentials |
+| E4.11 | Health Probes (Liveness/Readiness) | Platform Engineer | As a Platform Engineer, I want health checks so that Kubernetes manages pod health | M | Liveness & readiness probes configured |
+| E4.12 | Resource Requests & Limits | Platform Engineer | As a Platform Engineer, I want resource limits so that workloads are controlled | M | CPU/memory limits defined |
+| E4.13 | Logging Visibility | SRE | As an SRE, I want logs from pods so that issues can be debugged | M | Logs accessible via kubectl logs |
+| E4.14 | Basic Deployment Validation | DevOps Engineer | As a DevOps Engineer, I want to validate deployment so that system is working end-to-end | M | Frontend → Backend → DB works in cluster |
+| E4.15 | Horizontal Pod Autoscaler (HPA) | Platform Engineer | As a Platform Engineer, I want auto-scaling so that system handles load | S | HPA configured; Pods scale under load |
+| E4.16 | ConfigMaps for Configuration | Platform Engineer | As a Platform Engineer, I want config maps so that configs are externalized | S | ConfigMaps used for non-sensitive configs |
+| E4.17 | Rolling Update Strategy | Platform Engineer | As a Platform Engineer, I want rolling updates so that deployments are smooth | S | No downtime during updates |
+| E4.18 | Pod Restart Policies | Platform Engineer | As a Platform Engineer, I want restart policies so that failures are handled | S | Pods restart automatically on failure |
+| E4.19 | Ingress Controller Setup | Platform Engineer | As a Platform Engineer, I want ingress so that routing is managed efficiently | C | Ingress controller configured |
+| E4.20 | Multi-Namespace Strategy | Platform Engineer | As a Platform Engineer, I want multiple namespaces so that environments are separated | C | Dev/staging namespaces defined |
+| E4.21 | Service Mesh Integration | Platform Engineer | As a Platform Engineer, I want service mesh so that traffic control is enhanced | C | Service mesh integrated (future) |
+| E4.22 | Multi-Cluster Deployment | Cloud Engineer | As a Cloud Engineer, I want multi-cluster setup so that system is globally distributed | W | Not required for current scale; adds complexity |
+| E4.23 | Advanced Traffic Routing (Canary/Blue-Green) | Platform Engineer | As a Platform Engineer, I want advanced routing so that releases are safer | W | Will be handled later if needed |
+| E4.24 | Chaos Engineering Setup | SRE | As an SRE, I want chaos testing so that resilience is validated | W | Out of scope for initial deployment phase |
+
+---
 
 ---
 
