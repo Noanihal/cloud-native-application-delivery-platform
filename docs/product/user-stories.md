@@ -65,9 +65,7 @@
 | E1.24 | UI/UX Optimization | Developer | As a developer, I want improved UI/UX so that user experience is enhanced | W | UI is not core to DevOps learning; minimal UI sufficient |
 | E1.25 | Complex Business Logic | Developer | As a developer, I want advanced business logic so that application is feature-rich | W | Focus is platform engineering, not application complexity |
 
----
-
----
+--
 
 # 🟦 EPIC E2: Containerization
 
