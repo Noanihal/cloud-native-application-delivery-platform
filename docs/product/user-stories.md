@@ -169,11 +169,32 @@
 
 # 🟦 EPIC E6: Observability
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E6.1 | Metrics Collection | SRE | As an SRE, I want metrics so that system performance is monitored | M | Prometheus collects metrics |
-| E6.2 | Dashboard | SRE | As an SRE, I want dashboards so that system health is visible | M | Grafana dashboards available |
-| E6.3 | Logging | SRE | As an SRE, I want logs so that issues can be debugged | S | Logs collected and searchable |
+# 🟦 EPIC E5: GitOps Deployment
+
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E5.1 | GitOps Repository Setup | DevOps Engineer | As a DevOps Engineer, I want a dedicated Git repository so that deployment configurations are version controlled | M | Repo created; Structure defined for manifests/Helm |
+| E5.2 | Helm Chart Creation (Frontend) | Platform Engineer | As a Platform Engineer, I want Helm charts for frontend so that deployments are standardized | M | Helm chart created; Deployable via Helm |
+| E5.3 | Helm Chart Creation (Backend) | Platform Engineer | As a Platform Engineer, I want Helm charts for backend so that deployments are standardized | M | Helm chart created; Backend deploys successfully |
+| E5.4 | Helm Chart Creation (Database) | Platform Engineer | As a Platform Engineer, I want Helm charts for database so that deployment is consistent | M | DB Helm chart works; Persistent storage configured |
+| E5.5 | Values Configuration (Environment-based) | Platform Engineer | As a Platform Engineer, I want values files so that configurations differ per environment | M | values.yaml supports env configs |
+| E5.6 | ArgoCD Installation | Platform Engineer | As a Platform Engineer, I want ArgoCD installed so that GitOps deployment is enabled | M | ArgoCD running in cluster |
+| E5.7 | ArgoCD Application Setup | Platform Engineer | As a Platform Engineer, I want ArgoCD apps configured so that deployments are automated | M | Application created; Sync works |
+| E5.8 | GitOps Sync (Auto Deployment) | DevOps Engineer | As a DevOps Engineer, I want ArgoCD to sync automatically so that deployments happen on Git changes | M | Changes in repo trigger deployment |
+| E5.9 | Deployment State Visibility | SRE | As an SRE, I want deployment status visibility so that system state is monitored | M | ArgoCD UI shows sync status |
+| E5.10 | Separation of GitOps and App Repos | DevOps Engineer | As a DevOps Engineer, I want separate repos so that concerns are isolated | M | App code and deployment configs separated |
+| E5.11 | Rollback Capability via Git | Platform Engineer | As a Platform Engineer, I want rollback using Git so that deployments can be reverted | M | Reverting Git commit rolls back deployment |
+| E5.12 | Secrets Handling in GitOps | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets managed securely so that sensitive data is protected | M | Secrets not stored in plain text; External or encrypted |
+| E5.13 | App-of-Apps Pattern | Platform Engineer | As a Platform Engineer, I want app-of-apps so that multiple services are managed centrally | S | Parent app manages child apps |
+| E5.14 | Sync Policies (Auto/Manual) | Platform Engineer | As a Platform Engineer, I want control over sync so that deployments are flexible | S | Sync modes configurable |
+| E5.15 | Drift Detection | SRE | As an SRE, I want drift detection so that config mismatches are identified | S | ArgoCD detects out-of-sync state |
+| E5.16 | Environment Separation (dev/staging) | DevOps Engineer | As a DevOps Engineer, I want env separation so that deployments are isolated | S | Separate configs per env |
+| E5.17 | Multi-Cluster GitOps | Platform Engineer | As a Platform Engineer, I want multi-cluster support so that system scales | C | Multiple clusters managed |
+| E5.18 | Helm Chart Reusability | Platform Engineer | As a Platform Engineer, I want reusable charts so that services scale easily | C | Charts parameterized |
+| E5.19 | GitOps Access Control | DevSecOps Engineer | As a DevSecOps Engineer, I want RBAC so that deployments are secure | C | Role-based access enforced |
+| E5.20 | Multi-Tenant GitOps Setup | Platform Engineer | As a Platform Engineer, I want multi-tenant GitOps so that multiple teams can deploy independently | W | Not required for single-project scope |
+| E5.21 | Advanced Deployment Strategies (Canary/Blue-Green via GitOps) | Platform Engineer | As a Platform Engineer, I want advanced strategies so that releases are safer | W | Will be considered after baseline GitOps |
+| E5.22 | Policy Enforcement (OPA/Gatekeeper) | DevSecOps Engineer | As a DevSecOps Engineer, I want policy enforcement so that configs are validated | W | Out of scope for initial implementation |
 
 ---
 
