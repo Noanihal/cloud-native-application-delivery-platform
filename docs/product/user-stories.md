@@ -44,38 +44,26 @@
 | E1.3 | Database Setup | Developer | As a developer, I want a database so that data is stored persistently | M | DB initialized; Backend connects |
 | E1.4 | Service Configuration via Environment Variables | Developer | As a developer, I want environment-based configs so that services are configurable across environments | M | No hardcoded configs; Env variables used |
 | E1.5 | Standardized Project Structure | Developer | As a developer, I want structured codebases so that services are maintainable | M | Clean folder structure; Separation of concerns |
-
 | E1.6 | API Integration (Frontend ↔ Backend) | Developer | As a developer, I want frontend to call backend APIs so that data flows through system | M | API calls succeed; Data displayed |
 | E1.7 | Backend ↔ Database Integration | Developer | As a developer, I want backend connected to DB so that data operations work | M | Queries execute successfully |
-
 | E1.8 | Health Check Endpoint | Developer | As a developer, I want health endpoints so that services can be monitored | M | `/health` endpoint returns status |
-
 | E1.9 | Application Logging | Developer | As a developer, I want logging so that system behavior can be tracked | M | Logs generated for requests/errors |
-
 | E1.10 | Local Multi-Service Execution | Developer | As a developer, I want all services to run together locally so that integration is validated | M | Frontend, backend, DB run together |
-
 | E1.11 | Docker-Ready Codebase | DevOps Engineer | As a DevOps Engineer, I want services structured for containerization so that Dockerization is seamless | M | No OS-specific dependencies; Services container-ready |
-
 | E1.12 | Dependency Management | Developer | As a developer, I want proper dependency management so that builds are reproducible | M | Dependencies locked; Build succeeds |
-
-
 | E1.13 | Centralized Configuration File | Developer | As a developer, I want centralized config so that environment management is easier | S | Config file exists; Supports multiple environments |
 | E1.14 | API Response Standardization | Developer | As a developer, I want consistent API responses so that system behavior is predictable | S | Standard success/error format |
 | E1.15 | Error Handling Mechanism | Developer | As a developer, I want structured error handling so that failures are managed | S | Errors handled gracefully |
 | E1.16 | Seed/Test Data Setup | Developer | As a developer, I want initial data so that system can be tested easily | S | Sample data available |
 | E1.17 | Basic Input Validation | Developer | As a developer, I want input validation so that invalid requests are prevented | S | Invalid inputs rejected |
 | E1.18 | Port Configuration | Developer | As a developer, I want configurable ports so that services are flexible | S | Ports defined via env |
-
 | E1.19 | Local Orchestration (docker-compose) | DevOps Engineer | As a DevOps Engineer, I want docker-compose so that local multi-service setup is easier | C | Services run via single command |
 | E1.20 | API Documentation (Basic) | Developer | As a developer, I want API docs so that endpoints are clear | C | API endpoints documented |
 | E1.21 | Structured Logging Format | Developer | As a developer, I want structured logs so that logs are machine-readable | C | JSON/log format consistent |
 | E1.22 | Config Profiles (dev/test) | Developer | As a developer, I want config profiles so that environments are separated | C | Profiles defined |
-
 | E1.23 | Advanced Authentication System | Developer | Out of scope for initial DevOps focus |
 | E1.24 | UI/UX Optimization | Developer | Not relevant for DevOps objective |
 | E1.25 | Complex Business Logic | Developer | Focus is platform, not product complexity |
-
----
 
 ---
 
