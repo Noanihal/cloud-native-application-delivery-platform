@@ -37,8 +37,8 @@
 
 # 🟦 EPIC E1: Application Setup
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
 | E1.1 | Frontend Service Setup | Developer | As a developer, I want a frontend service so that users can interact with the application | M | Frontend runs locally; UI accessible |
 | E1.2 | Backend Service Setup | Developer | As a developer, I want a backend API so that business logic is handled | M | API runs locally; Endpoint responds |
 | E1.3 | Database Setup | Developer | As a developer, I want a database so that data is stored persistently | M | DB initialized; Backend connects |
@@ -61,9 +61,11 @@
 | E1.20 | API Documentation (Basic) | Developer | As a developer, I want API docs so that endpoints are clear | C | API endpoints documented |
 | E1.21 | Structured Logging Format | Developer | As a developer, I want structured logs so that logs are machine-readable | C | JSON/log format consistent |
 | E1.22 | Config Profiles (dev/test) | Developer | As a developer, I want config profiles so that environments are separated | C | Profiles defined |
-| E1.23 | Advanced Authentication System | Developer | Out of scope for initial DevOps focus |
-| E1.24 | UI/UX Optimization | Developer | Not relevant for DevOps objective |
-| E1.25 | Complex Business Logic | Developer | Focus is platform, not product complexity |
+| E1.23 | Advanced Authentication System | Developer | As a developer, I want authentication so that system is secure | W | Not required for DevOps focus; adds product complexity instead of platform value |
+| E1.24 | UI/UX Optimization | Developer | As a developer, I want improved UI/UX so that user experience is enhanced | W | UI is not core to DevOps learning; minimal UI sufficient |
+| E1.25 | Complex Business Logic | Developer | As a developer, I want advanced business logic so that application is feature-rich | W | Focus is platform engineering, not application complexity |
+
+---
 
 ---
 
