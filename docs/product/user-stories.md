@@ -97,36 +97,28 @@
 
 # 🟦 EPIC E3: CI/CD Pipeline
 
-# 🟦 EPIC E3: CI/CD Pipeline
-
 | ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
 |----|------|------|------------|----------|------------------------------|
 | E3.1 | CI Pipeline Setup (GitHub Actions) | DevOps Engineer | As a DevOps Engineer, I want to set up CI pipeline so that builds are automated on code push | M | Pipeline triggers on push; Workflow executes successfully |
 | E3.2 | Code Checkout & Environment Setup | DevOps Engineer | As a DevOps Engineer, I want pipeline to fetch code and set environment so that build can run | M | Code checkout works; Environment prepared |
 | E3.3 | Dependency Installation in CI | DevOps Engineer | As a DevOps Engineer, I want dependencies installed in pipeline so that builds are reproducible | M | Dependencies installed successfully |
 | E3.4 | Build Application in CI | DevOps Engineer | As a DevOps Engineer, I want application build step so that artifacts are generated | M | Build step completes without failure |
-|----|------|------|------------|----------|------------------------------|
 | E3.5 | Docker Image Build in CI | DevOps Engineer | As a DevOps Engineer, I want to build Docker images in CI so that applications are containerized automatically | M | Images built successfully |
 | E3.6 | Docker Image Tagging | DevOps Engineer | As a DevOps Engineer, I want proper tagging so that images are versioned | M | Tags include latest + commit-based tag |
 | E3.7 | Authenticate with AWS ECR | DevOps Engineer | As a DevOps Engineer, I want pipeline to authenticate with ECR so that images can be pushed | M | Authentication succeeds securely |
 | E3.8 | Push Docker Image to ECR | DevOps Engineer | As a DevOps Engineer, I want to push images to ECR so that they are available for deployment | M | Images available in ECR repository |
-|----|------|------|------------|----------|------------------------------|
 | E3.9 | CI Pipeline Logging | DevOps Engineer | As a DevOps Engineer, I want logs for pipeline execution so that issues can be debugged | M | Logs visible for each stage |
 | E3.10 | Pipeline Failure Handling | DevOps Engineer | As a DevOps Engineer, I want pipeline to fail correctly so that issues are caught early | M | Pipeline fails on errors; No silent failures |
-
 | E3.11 | Secrets Management in CI | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets handled securely so that credentials are protected | M | Secrets stored securely; No hardcoding |
 | E3.12 | Basic Pipeline Validation | DevOps Engineer | As a DevOps Engineer, I want validation checks so that pipeline ensures correctness | M | Pipeline completes end-to-end successfully |
-|----|------|------|------------|----------|------------------------------|
 | E3.13 | Code Quality Scan (SonarQube) | DevSecOps Engineer | As a DevSecOps Engineer, I want code scanning so that quality issues are detected | S | Scan runs; Issues reported |
 | E3.14 | Image Vulnerability Scan (Trivy) | DevSecOps Engineer | As a DevSecOps Engineer, I want image scanning so that vulnerabilities are detected | S | Scan runs; Vulnerabilities reported |
 | E3.15 | Pipeline Stage Separation | DevOps Engineer | As a DevOps Engineer, I want clear pipeline stages so that workflow is structured | S | Build, test, push stages separated |
 | E3.16 | Branch-Based Pipeline Execution | DevOps Engineer | As a DevOps Engineer, I want branch-based triggers so that environments can be controlled | S | Pipeline behavior differs by branch |
 | E3.17 | Artifact Retention | DevOps Engineer | As a DevOps Engineer, I want artifacts stored so that builds are traceable | S | Artifacts stored and accessible |
-|----|------|------|------------|----------|------------------------------|
 | E3.18 | Parallel Job Execution | DevOps Engineer | As a DevOps Engineer, I want parallel jobs so that pipeline is faster | C | Jobs run in parallel |
 | E3.19 | Notification Integration | DevOps Engineer | As a DevOps Engineer, I want notifications so that failures are communicated | C | Notifications sent on failure |
 | E3.20 | Reusable Pipeline Templates | DevOps Engineer | As a DevOps Engineer, I want reusable workflows so that pipelines are maintainable | C | Templates created and reused |
-|----|------|------|------------|----------|------------------------------|
 | E3.21 | Multi-Environment CD (Full Deployment) | DevOps Engineer | As a DevOps Engineer, I want full CD pipeline so that deployments are automated across environments | W | Will be handled in GitOps (E4/E5); not part of initial CI |
 | E3.22 | Advanced Pipeline Orchestration (Jenkins) | DevOps Engineer | As a DevOps Engineer, I want Jenkins pipelines so that complex workflows can be managed | W | Will be introduced later phase |
 | E3.23 | Canary / Blue-Green Deployment | Platform Engineer | As a Platform Engineer, I want advanced deployment strategies so that releases are safer | W | Out of scope for initial CI/CD setup |
