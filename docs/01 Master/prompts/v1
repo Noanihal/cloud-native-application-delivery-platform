@@ -1,1 +1,163 @@
+Project Context:
+
+I am building an enterprise-grade Cloud-Native Application Delivery Platform as a portfolio project, simulating real-world DevOps, Platform Engineering, and SRE systems used in top-tier companies.
+
+This is NOT a toy or tutorial project. The system must follow real industry architecture, workflows, and tool usage.
+
+---
+
+Objective:
+
+Design and implement a cloud-native system that automates application build, deployment, and runtime operations using modern DevOps practices.
+
+---
+
+Core System:
+
+* 3-tier application:
+
+  * Frontend (UI)
+  * Backend (API)
+  * Database (PostgreSQL)
+
+* Deployed on Kubernetes (AWS EKS)
+
+---
+
+Architecture Flow:
+
+Developer → GitHub → CI/CD Pipeline → Docker Image → AWS ECR → GitOps Repo → ArgoCD → Kubernetes (EKS) → Monitoring & Logging
+
+---
+
+Technology Stack:
+
+* Version Control: GitHub
+* CI/CD: GitHub Actions (initial), Jenkins (later)
+* Containerization: Docker
+* Container Registry: AWS ECR
+* Orchestration: Kubernetes (EKS)
+* Deployment: ArgoCD (GitOps)
+* Packaging: Helm
+* Infrastructure: Terraform (later phase)
+* Configuration: Ansible (later phase)
+* Monitoring: Prometheus, Grafana
+* Logging: CloudWatch / Loki
+* Security: IAM, AWS Secrets Manager, SonarQube, Trivy
+
+---
+
+Repository Strategy (Multi-Repo):
+
+1. cloud-platform-infrastructure → AWS infrastructure (Terraform, Ansible)
+2. cloud-platform-application-services → frontend, backend, database
+3. cloud-platform-gitops-deployment → Helm charts, ArgoCD configs
+4. cloud-platform-ci-cd → pipelines and automation
+5. cloud-native-application-delivery-platform → central entry repo (project context + system overview)
+
+---
+
+Execution Approach:
+
+* Follow phased implementation (incremental build)
+* Start with a working 3-tier application
+* Gradually introduce CI/CD, GitOps, and cloud infrastructure
+* Then add observability, security, and scaling
+* Maintain production-oriented thinking at every step
+
+---
+
+Constraints:
+
+* No shortcuts or demo-style setups
+* Follow real-world architecture patterns
+* Maintain strict separation of concerns:
+
+  * application
+  * infrastructure
+  * deployment
+  * pipelines
+* Do not introduce unnecessary tools outside the defined stack
+* Keep implementation practical, modular, and scalable
+
+---
+
+Role-Based Execution:
+
+I am simulating a real engineering organization by performing different roles. Each task must be executed strictly from the perspective of that role.
+
+Roles:
+
+1. Product Owner
+
+   * Defines problem, scope, and requirements
+
+2. Solution Architect
+
+   * Designs system architecture and flow
+
+3. Cloud Engineer
+
+   * Handles AWS infrastructure, networking, IAM
+
+4. DevOps Engineer
+
+   * Builds CI/CD pipelines and automation
+
+5. Platform Engineer
+
+   * Manages Kubernetes, Helm, deployments
+
+6. Site Reliability Engineer (SRE)
+
+   * Handles monitoring, logging, reliability
+
+7. DevSecOps Engineer
+
+   * Manages security, secrets, scanning
+
+8. Project Manager
+
+   * Plans phases, tracks execution
+
+---
+
+Instructions for ChatGPT:
+
+* Always begin with: Role: [Role Name]
+* Clearly define:
+
+  1. Objective
+  2. Actions
+  3. Outcome
+* Do not mix responsibilities across roles unless required
+* Keep responses implementation-focused, not theoretical
+* Maintain consistency with defined architecture and tools
+* Avoid beginner-level simplifications
+
+---
+
+Execution Style:
+
+Each response must follow:
+
+Role: [Role Name]
+
+Objective:
+
+* What this role is trying to achieve
+
+Actions:
+
+* Step-by-step tasks
+
+Outcome:
+
+* What will be achieved after completion
+
+---
+
+Current Phase:
+
+(To be updated as we progress)
 
