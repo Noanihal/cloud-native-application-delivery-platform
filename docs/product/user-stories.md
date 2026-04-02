@@ -65,26 +65,71 @@
 | E1.24 | UI/UX Optimization | Developer | As a developer, I want improved UI/UX so that user experience is enhanced | W | UI is not core to DevOps learning; minimal UI sufficient |
 | E1.25 | Complex Business Logic | Developer | As a developer, I want advanced business logic so that application is feature-rich | W | Focus is platform engineering, not application complexity |
 
---
+---
 
 # 🟦 EPIC E2: Containerization
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E2.1 | Frontend Containerization | DevOps Engineer | As a DevOps Engineer, I want to containerize frontend so that deployments are consistent | M | Docker image builds; Container runs |
-| E2.2 | Backend Containerization | DevOps Engineer | As a DevOps Engineer, I want to containerize backend so that deployments are consistent | M | API works in container; Env handled |
-| E2.3 | Database Containerization | DevOps Engineer | As a DevOps Engineer, I want to containerize DB so that deployment is simplified | S | DB container runs; Persistence enabled |
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E2.1 | Frontend Dockerfile Creation | Developer | As a developer, I want a Dockerfile for frontend so that it can be containerized | M | Dockerfile created; Image builds successfully |
+| E2.2 | Backend Dockerfile Creation | Developer | As a developer, I want a Dockerfile for backend so that it can be containerized | M | Dockerfile created; API works inside container |
+| E2.3 | Database Container Setup | Developer | As a developer, I want database to run as a container so that setup is consistent | M | DB container runs; Backend connects |
+| E2.4 | Multi-Container Local Setup | Developer | As a developer, I want all services to run in containers locally so that integration is tested | M | Frontend, backend, DB containers run together |
+| E2.5 | Docker Networking Configuration | Developer | As a developer, I want containers to communicate so that services interact correctly | M | Services communicate via container network |
+| E2.6 | Environment Variables Injection | Developer | As a developer, I want environment variables in containers so that configs are dynamic | M | Env variables passed at runtime |
+| E2.7 | Docker Compose Setup | Developer | As a developer, I want docker-compose so that multi-service setup is simplified | M | All services run using single command |
+| E2.8 | Image Build Optimization | DevOps Engineer | As a DevOps Engineer, I want optimized Docker images so that builds are efficient | M | Multi-stage build used; Image size reduced |
+| E2.9 | Image Tagging Strategy | DevOps Engineer | As a DevOps Engineer, I want tagging strategy so that versions are traceable | M | Tags follow versioning (latest + commit-based) |
+| E2.10 | Image Validation | DevOps Engineer | As a DevOps Engineer, I want to validate images so that deployments are reliable | M | Containers run without errors |
+| E2.11 | Container Logging Validation | SRE | As an SRE, I want to verify container logs so that issues can be debugged | S | Logs accessible via container runtime |
+| E2.12 | Container Health Check Integration | Developer | As a developer, I want health checks in containers so that service status is known | S | Health endpoint integrated in container |
+| E2.13 | Restart Policy Configuration | Platform Engineer | As a Platform Engineer, I want restart policies so that failed containers recover | S | Containers restart on failure |
+| E2.14 | .dockerignore Configuration | Developer | As a developer, I want to exclude unnecessary files so that images are efficient | S | Unused files excluded from build |
+| E2.15 | Port Exposure Standardization | Developer | As a developer, I want consistent port configuration so that services are accessible | S | Ports defined and exposed properly |
+| E2.16 | Base Image Standardization | DevOps Engineer | As a DevOps Engineer, I want standardized base images so that builds are secure and consistent | C | Official/minimal base images used |
+| E2.17 | Container Security Best Practices | DevSecOps Engineer | As a DevSecOps Engineer, I want secure container configs so that vulnerabilities are minimized | C | Non-root user; Minimal packages |
+| E2.18 | Resource Limits Definition | Platform Engineer | As a Platform Engineer, I want resource limits defined so that containers use resources efficiently | C | CPU/memory limits defined (future Kubernetes readiness) |
+| E2.19 | Multi-Arch Image Support | DevOps Engineer | As a DevOps Engineer, I want multi-architecture images so that system supports different environments | W | Not required for current scope; adds unnecessary complexity |
+| E2.20 | Advanced Image Caching Strategy | DevOps Engineer | As a DevOps Engineer, I want advanced caching so that builds are faster | W | Can be handled later in CI/CD phase |
+| E2.21 | Private Registry Setup (Local) | DevOps Engineer | As a DevOps Engineer, I want a private registry so that images are stored locally | W | AWS ECR will be used later; local registry unnecessary |
 
 ---
 
 # 🟦 EPIC E3: CI/CD Pipeline
 
-| ID | Title | Role | User Story | Priority | Acceptance Criteria |
-|----|------|------|------------|----------|---------------------|
-| E3.1 | Pipeline Trigger | DevOps Engineer | As a DevOps Engineer, I want pipeline trigger on commit so that builds are automated | M | Pipeline triggers; Logs visible |
-| E3.2 | Build Docker Images | DevOps Engineer | As a DevOps Engineer, I want to build Docker images so that apps are packaged | M | Images built; Proper tagging |
-| E3.3 | Push to ECR | DevOps Engineer | As a DevOps Engineer, I want to push images to ECR so that deployment is possible | M | Images in ECR; Auth works |
-| E3.4 | Code Scanning | DevSecOps Engineer | As a DevSecOps Engineer, I want code scanning so that vulnerabilities are detected | S | Scan runs; Issues reported |
+# 🟦 EPIC E3: CI/CD Pipeline
+
+| ID | Title | Role | User Story | Priority | Acceptance Criteria / Reason |
+|----|------|------|------------|----------|------------------------------|
+| E3.1 | CI Pipeline Setup (GitHub Actions) | DevOps Engineer | As a DevOps Engineer, I want to set up CI pipeline so that builds are automated on code push | M | Pipeline triggers on push; Workflow executes successfully |
+| E3.2 | Code Checkout & Environment Setup | DevOps Engineer | As a DevOps Engineer, I want pipeline to fetch code and set environment so that build can run | M | Code checkout works; Environment prepared |
+| E3.3 | Dependency Installation in CI | DevOps Engineer | As a DevOps Engineer, I want dependencies installed in pipeline so that builds are reproducible | M | Dependencies installed successfully |
+| E3.4 | Build Application in CI | DevOps Engineer | As a DevOps Engineer, I want application build step so that artifacts are generated | M | Build step completes without failure |
+|----|------|------|------------|----------|------------------------------|
+| E3.5 | Docker Image Build in CI | DevOps Engineer | As a DevOps Engineer, I want to build Docker images in CI so that applications are containerized automatically | M | Images built successfully |
+| E3.6 | Docker Image Tagging | DevOps Engineer | As a DevOps Engineer, I want proper tagging so that images are versioned | M | Tags include latest + commit-based tag |
+| E3.7 | Authenticate with AWS ECR | DevOps Engineer | As a DevOps Engineer, I want pipeline to authenticate with ECR so that images can be pushed | M | Authentication succeeds securely |
+| E3.8 | Push Docker Image to ECR | DevOps Engineer | As a DevOps Engineer, I want to push images to ECR so that they are available for deployment | M | Images available in ECR repository |
+|----|------|------|------------|----------|------------------------------|
+| E3.9 | CI Pipeline Logging | DevOps Engineer | As a DevOps Engineer, I want logs for pipeline execution so that issues can be debugged | M | Logs visible for each stage |
+| E3.10 | Pipeline Failure Handling | DevOps Engineer | As a DevOps Engineer, I want pipeline to fail correctly so that issues are caught early | M | Pipeline fails on errors; No silent failures |
+
+| E3.11 | Secrets Management in CI | DevSecOps Engineer | As a DevSecOps Engineer, I want secrets handled securely so that credentials are protected | M | Secrets stored securely; No hardcoding |
+| E3.12 | Basic Pipeline Validation | DevOps Engineer | As a DevOps Engineer, I want validation checks so that pipeline ensures correctness | M | Pipeline completes end-to-end successfully |
+|----|------|------|------------|----------|------------------------------|
+| E3.13 | Code Quality Scan (SonarQube) | DevSecOps Engineer | As a DevSecOps Engineer, I want code scanning so that quality issues are detected | S | Scan runs; Issues reported |
+| E3.14 | Image Vulnerability Scan (Trivy) | DevSecOps Engineer | As a DevSecOps Engineer, I want image scanning so that vulnerabilities are detected | S | Scan runs; Vulnerabilities reported |
+| E3.15 | Pipeline Stage Separation | DevOps Engineer | As a DevOps Engineer, I want clear pipeline stages so that workflow is structured | S | Build, test, push stages separated |
+| E3.16 | Branch-Based Pipeline Execution | DevOps Engineer | As a DevOps Engineer, I want branch-based triggers so that environments can be controlled | S | Pipeline behavior differs by branch |
+| E3.17 | Artifact Retention | DevOps Engineer | As a DevOps Engineer, I want artifacts stored so that builds are traceable | S | Artifacts stored and accessible |
+|----|------|------|------------|----------|------------------------------|
+| E3.18 | Parallel Job Execution | DevOps Engineer | As a DevOps Engineer, I want parallel jobs so that pipeline is faster | C | Jobs run in parallel |
+| E3.19 | Notification Integration | DevOps Engineer | As a DevOps Engineer, I want notifications so that failures are communicated | C | Notifications sent on failure |
+| E3.20 | Reusable Pipeline Templates | DevOps Engineer | As a DevOps Engineer, I want reusable workflows so that pipelines are maintainable | C | Templates created and reused |
+|----|------|------|------------|----------|------------------------------|
+| E3.21 | Multi-Environment CD (Full Deployment) | DevOps Engineer | As a DevOps Engineer, I want full CD pipeline so that deployments are automated across environments | W | Will be handled in GitOps (E4/E5); not part of initial CI |
+| E3.22 | Advanced Pipeline Orchestration (Jenkins) | DevOps Engineer | As a DevOps Engineer, I want Jenkins pipelines so that complex workflows can be managed | W | Will be introduced later phase |
+| E3.23 | Canary / Blue-Green Deployment | Platform Engineer | As a Platform Engineer, I want advanced deployment strategies so that releases are safer | W | Out of scope for initial CI/CD setup |
 
 ---
 
